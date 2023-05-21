@@ -6,7 +6,7 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 
 # Get the absolute path to the log file within the container
-file_path = os.path.abspath('../inputs/log.csv')
+file_path = os.path.abspath('/inputs/log.csv')
 
 # Read the log file
 df = pd.read_csv(file_path)
