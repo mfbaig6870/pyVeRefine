@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Set the entry point and command to run your application
-CMD ["python", "veRefine/a_logTransientThrottleFilter.py"]
+CMD ["python", "veRefine/working_api.py"]
