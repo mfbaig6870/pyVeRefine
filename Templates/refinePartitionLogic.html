@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example Page with IFrame on the Right</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			height: 100vh;
+		}
+
+		.left-column {
+			flex: 1;
+			background-color: white;
+			padding: 20px;
+		}
+
+		.right-column {
+			flex: 1;
+			background-color: white;
+			padding: 10px;
+		}
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left-column">
+        <!-- Your content for the left-hand side goes here -->
+        <h1><span style="color: #c800c8;">pyVeRefine.</span></h1>
+        <h2><span style="color: #c8dcc8;">3. Apply Bin Partition Logic</span></h2>
+        <br>
+        <p><b>d. Average AFR Bins</b></p>
+        <p>
+            This script processes a log file of vehicle performance data using the pandas library. It filters the data
+            based on a specified threshold value and creates partitions for the RPM and MAP values using predefined
+            ranges. The script then groups the data by RPM and MAP bins and calculates the mean value for a certain
+            variable. The resulting data is rounded and reshaped into a grid, which is saved as a CSV file. The purpose
+            of this script is to enable direct analysis of the data by condensing it into a structure resembling a
+            volumetric efficiency table.
+        </p>
+        <br>
+        <p><b>e. Average Target AFR Bins</b></p>
+        <p>
+            In this script, the log file is loaded into a DataFrame, the data is filtered by the TPS column, keeping
+            only the rows where the value in that column is greater than 10. Partition ranges are defined for RPM and
+            MAP values, and bins are created using these partition ranges. The data is grouped by the RPM and MAP bins,
+            and the mean Target AFR value is calculated for each group. The resulting DataFrame is then reshaped into a
+            grid of MAP vs RPM, with the mean AFR values displayed in each cell. Finally, the resulting grid is saved
+            as a CSV file.
+        </p>
+        <br>
+        <p><b>f. Average AFR Delta</b></p>
+        <p>
+            This script performs a data manipulation task involving two input DataFrames and one output DataFrame.
+            It uses the pandas library to read the input DataFrames and write to the output DataFrame. The script
+            calculates the percentage difference between the corresponding values of the two input DataFrames, skipping
+            the first row and column which are assumed to contain headers and row labels. If the denominator is zero
+            when calculating the percentage difference, the script outputs 0. The resulting output DataFrame has the
+            same number of rows as the input files and each cell in the output file contains the percentage difference
+            calculated from the corresponding cells in the input files.
+        </p>
+        <br>
+    </div>
+    <div class="right-column">
+        <iframe src="" title=""></iframe>
+    </div>
+</div>
+<footer class="footer">&copy; 2023 raceGradeData</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example Page with IFrame on the Right</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			height: 100vh;
+		}
+
+		.left-column {
+			flex: 1;
+			background-color: white;
+			padding: 20px;
+		}
+
+		.right-column {
+			flex: 1;
+			background-color: white;
+			padding: 10px;
+		}
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="left-column">
+			<!-- Your content for the left-hand side goes here -->
+			<h1><span style="color: #c800c8;">pyVeRefine.</span></h1>
+			<h2><span style="color: #c8dcc8;">vizPackage.3dVeTable.</span></h2>
+            <br>
+			<p>3D Surface Plot w/Wireframe and Colormap data visualization using Plotly open-source data visualization library.</p>
+            <br>
+            <p>Final iteration of the smoothed VE Table after applying Transient Throttle, Hit Count, AFR Delta, and Smoothing Logic</p>
+            <br>
+			<p><b>Transient Throttle Logic</b></p>
+			<p>Identify and filter instances of transient throttle by calculating the ramp rate of throttle position and air fuel ratio channels.</p>
+			<br>
+			<p><b>Hit Count Logic</b></p>
+			<p>Apply bin partition logic to determine log hit counts for particular RPM x MAP instances.</p>
+			<br>
+			<p><b>AFR Delta Logic</b></p>
+			<p>Apply bin partition logic to determine actual and target air fuel ratios/deltas for particular RPM x MAP instances.</p>
+			<br>
+			<p><b>Smoothing Logic</b></p>
+			<p>Apply the Gaussian function to the recalculated VE Table:</p>
+			<p><i>&emsp;K(x,y) = (1/2πσ^2) * e^(-(x^2+y^2)/(2σ^2))</i></p>
+			<p><i>&emsp;&emsp;where:</i></p>
+			<p><i>&emsp;&emsp;&emsp;x and y are the coordinates of the kernel matrix</i></p>
+			<p><i>&emsp;&emsp;&emsp;σ is the standard deviation of the Gaussian function</i></p>
+		</div>
+		<div class="right-column">
+			<iframe src="../veRefineViz/veTable3d.html" title="3D VE Table Visualization"></iframe>
+		</div>
+	</div>
+	<footer class="footer">&copy; 2023 raceGradeData</footer>
+</body>
+</html>

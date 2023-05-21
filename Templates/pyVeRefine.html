@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pyVeRefine</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			height: 100vh;
+		}
+
+		.left-column {
+			flex: 1;
+			background-color: white;
+			padding: 20px;
+		}
+
+		.right-column {
+			flex: 1;
+			background-color: white;
+			padding: 10px;
+		}
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left-column">
+        <!-- Your content for the left-hand side goes here -->
+        <h1><span style="color: #c800c8;">pyVeRefine.</span></h1>
+        <h2><span style="color: #c8dcc8;">A public utility to ingest, characterize, and filter large datasets for the refinement of Volumetric Efficiency tables.</span>
+        </h2>
+        <br>
+        <p><b>1. Upload a Log File and VE Table</b></p>
+        <p>(1) Upload a data log file for consumption and analysis and (2) the volumetric efficiency table corresponding
+            to the data log file.</p>
+        <br>
+        <p><b>2. Characterize and Filter Log Data</b></p>
+        <p>Characterize records in the data log file to identify specific events and filter the dataset to exclude
+            superfluous data from calculation.</p>
+        <br>
+        <p><b>3. Apply Bin Partition Logic</b></p>
+        <p>Place records from the data log files into collection bins partitioned by engine RPM and manifold pressure,
+            replicating the physical structure of the VE Table.</p>
+        <br>
+        <p><b>4. Calculate Air Fuel Ratio Variance</b></p>
+        <p>With the data log file records sorted into RPM x MAP partition bins, average the Actual AFR and Target AFR
+            data within the bins, then calculate the variance between the two fields to determine the percentage of
+            correction necessary.</p>
+        <br>
+        <p><b>5. Apply Correction to VE Table</b></p>
+        <p>Apply the AFR correction to the VE Table.</p>
+        <br>
+        <p><b>6. Apply Smoothing Logic to VE Table</b></p>
+        <p>Apply a smoothing logic to the revised VE Table to ensure cell to cell transitions fall within an acceptable
+            range for smooth engine operation.</p>
+    </div>
+    <div class="right-column">
+        <iframe src="" title=""></iframe>
+    </div>
+</div>
+<footer class="footer">&copy; 2023 raceGradeData</footer>
+</body>
+</html>
