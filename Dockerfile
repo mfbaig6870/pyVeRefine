@@ -13,5 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire project directory to the working directory
 COPY . .
 
+EXPOSE 5000
+
 # Set the entry point and command to run your application
 CMD ["python", "veRefine/working_api.py"]
